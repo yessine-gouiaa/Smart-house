@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <script defer src="login.js"></script>
+</head>
+
+<body>
+  <main id="main-holder">
+    <h1 id="login-header">Login</h1>
+    
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    
+    <form id="login-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+      <input type="submit" value="Login" id="login-form-submit">
+    </form>
+
+    <!-- Bouton "Changer mot de passe" -->
+    <button id="change-password-button" >Changer le mot de passe</button>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  
+  
+  </main>
+
+  <script>
+    // Fonction pour envoyer un e-mail
+    function sendEmail() {
+      // Définir les informations de l'e-mail
+      Email.send({
+        host :"smtp.office365.com",
+        SecureToken: "C973D7AD-F097-4B95-91F4-40ABC5567812", // Remplacez YOUR_SECURE_TOKEN par votre jeton sécurisé SMTPJS
+        To: 'yessine.gouiaa08@gmail.com', // Adresse e-mail du destinataire
+        From: 'yessine.gouiaa@outlook.com', // Adresse e-mail de l'expéditeur
+        Subject: 'Sujet de l\'e-mail',
+        Body: 'Corps de l\'e-mail'
+      }).then(
+        message => {
+          console.log("E-mail envoyé avec succès :", message);
+        }
+      );
+    }
+
+    // Appeler la fonction pour envoyer l'e-mail
+    sendEmail();
+  </script>
+</body>
+
+</html>

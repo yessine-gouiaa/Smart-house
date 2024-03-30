@@ -1,0 +1,188 @@
+<!DOCTYPE html> 
+
+     <html lang='fr'> 
+      
+
+     <head> 
+         <title>PC</title> 
+         <meta http-equiv='refresh' content='60' name='viewport' content='width=device-width, initial-scale=1' charset='UTF-8' />
+        
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <!-- <link rel="stylesheet" type="text/css" href="votrecss.css"> -->
+         <script src="https://kit.fontawesome.com/7ee32702f8.js" crossorigin="anonymous"></script>
+         <script src="script.js" type="text/javascript" ></script>
+       
+     </head> 
+
+        
+    </header>
+     
+
+         
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand" class="text-success"  href="#">A.L.T</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">supervision</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Maison
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">cuisine</a>
+                        <a class="dropdown-item" href="#">chambre</a>
+                        <a class="dropdown-item" href="#">salon</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">autres options</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="TV" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">rechercher</button>
+              </form>
+            </div>
+       </nav>
+
+
+ 
+
+      <br>
+      <div class="p-3 mb-2 bg-dark text-white"> 
+       <h1 style="text-align: center;">  PANNEAU DE CONTROLE DES CAPTEURS  </h1>
+    </div>
+    <h4 style="text-align: center;">  controle du capteur d'incendie </h4>
+        <div  class="row justify-content-lg-center" >
+        
+          
+          <button onclick="btnOncapincendie()" type="button" class="btn btn-success btn-lg" style="width:40%;"> ON </button>
+          <button onclick="btnOffcapincendie()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> OFF </button>
+        </div>
+        <br>
+      <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du capteur : </strong> <span style="text-align: center;" id="statecapfire">*******</span> </p>
+      <br>
+       
+       <h4 style="text-align: center;">  controle du capteur de pluie </h4>
+       <div  class="row justify-content-lg-center" >
+        
+         <button onclick="btnOncappluie()" type="button" class="btn btn-success btn-lg" style="width:40%;"> ON </button>
+         <button onclick="btnOffcappluie()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> OFF </button>
+       </div>
+       <br>
+      <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du capteur : </strong> <span style="text-align: center;" id="statecaprain">*********</span> </p>
+      <br>
+      
+      <h4 style="text-align: center;"> controle du capteur de gaz </h4>
+      <div  class="row justify-content-lg-center" >
+        
+        <button onclick="btnOncapgaz()" type="button" class="btn btn-success btn-lg" style="width:40%;"> ON </button>
+        <button onclick="btnOffcapgaz()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> OFF </button>
+      </div>
+      <br>
+      <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du capteur : </strong> <span style="text-align: center;" id="statecapgaz">*********</span> </p>
+      <br>
+     
+     <h4 style="text-align: center;">  controle du ventilateur </h4>
+     <div  class="row justify-content-lg-center" >
+      
+       
+       <button onclick="btnOncapvent()" type="button" class="btn btn-success btn-lg" style="width:40%;color : #48de8b ;"> ON </button>
+       <button onclick="btnOffcapvent()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> OFF </button>
+     </div>
+     <br>
+     <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du ventilateur : </strong> <span style="text-align: center;" id="statecapvent">*****</span> </p>
+     
+      <br>
+
+      <h4 style="text-align: center;">  controle du garage </h4>
+     <div  class="row justify-content-lg-center" >
+       
+       <button onclick="garageon()" type="button" class="btn btn-success btn-lg" style="width:40%;color : #48de8b ;"> fermer </button>
+       <button onclick="garageoff()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> ouvrir </button>
+     </div>
+     <br>
+      <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du garage : </strong> <span style="text-align: center;" id="servo garage">*******</span> </p>
+      <br>
+   
+
+      <h4 style="text-align: center;">  controle du fenetre </h4>
+      <div  class="row justify-content-lg-center" >
+        
+        <button onclick="fenetreon()" type="button" class="btn btn-success btn-lg" style="width:40%;color : #48de8b ;"> fermer </button>
+        <button onclick="fenetreoff()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> ouvrir </button>
+      </div>
+      <br>
+       <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du fenetre : </strong> <span style="text-align: center;" id="servo fenetre">******</span> </p>
+       <br>
+    
+    
+
+   <br>
+      <div class="p-3 mb-2 bg-dark text-white"> 
+         <h1 style="text-align: center;">  PANNEAU DE VERIFICATION DES SORTIE des CAPTEURS  </h1>
+      </div>
+      <br>
+
+      <br>
+     <h4 style="text-align: center;">  test du  capteur d'incendie </h4>
+       <div  class="row justify-content-lg-center" >
+         
+         <button onclick="btnOnincendie()" type="button" class="btn btn-success btn-lg" style="width:40%;"> ON </button>
+         <button onclick="btnOffincendie()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> OFF </button>
+       </div>
+       <br>
+      <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du capteur : </strong> <span style="text-align: center;" id="CFOS">********</span> </p>
+      <br>
+      
+      <h4 style="text-align: center;">  test du capteur de pluie </h4>
+      <div  class="row justify-content-lg-center" >
+       
+        <button onclick="btnOnpluie()" type="button" class="btn btn-success btn-lg" style="width:40%;"> ON </button>
+        <button onclick="btnOffpluie()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> OFF </button>
+      </div>
+      <br>
+      <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du capteur : </strong> <span style="text-align: center;" id="CROS">*******</span> </p>
+      <br>
+     <h4 style="text-align: center;">  test du capteur de gaz </h4>
+     <div  class="row justify-content-lg-center" >
+       
+       <button onclick="btnOngaz()" type="button" class="btn btn-success btn-lg" style="width:40%;"> ON </button>
+       <button onclick="btnOffgaz()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> OFF </button>
+     </div>
+
+     <br>
+      <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du capteur : </strong> <span style="text-align: center;" id="CGOS">******</span> </p>
+      <br>
+    
+    <h4 style="text-align: center;">  test du ventilateur </h4>
+    <div  class="row justify-content-lg-center" >
+      
+      <button onclick="btnOnvent()" type="button" class="btn btn-success btn-lg" style="width:40%;color : #48de8b ; "> ON </button>
+      <button onclick="btnOffvent()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> OFF </button>
+    </div>
+
+    <br>
+      <p class="p-3 mb-2 bg-warning text-dark"  style="text-align: center;"><strong> etat du capteur : </strong> <span style="text-align: center;" id="CVOS">*******</span> </p>
+      <br>
+   <br>
+      
+
+
+
+      <div class="p-3 mb-2 bg-dark text-white" > 
+        <p style="text-align: center;" >ce projet a été crée par yessine gouiaa et encadré par Mme manel hentati comme un projet de fin d'annee</p> 
+         <p style="text-align: center;"><i > ENET'COM </i> </p>
+   </div> 
+
+</body>
+
+</html>

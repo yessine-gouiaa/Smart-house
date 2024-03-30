@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+
+     <html lang='fr'> 
+      
+
+     <head> 
+         <title>PA</title> 
+         <meta http-equiv='refresh' content='60' name='viewport' content='width=device-width, initial-scale=1' charset='UTF-8' />
+        
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <!-- <link rel="stylesheet" type="text/css" href="votrecss.css"> -->
+         <script src="https://kit.fontawesome.com/7ee32702f8.js" crossorigin="anonymous"></script>
+         <script src="script.js" type="text/javascript" ></script>
+       
+     </head> 
+
+        
+    </header>
+     
+
+         
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand" class="text-success"  href="#">A.L.T</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">supervision</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Maison
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">cuisine</a>
+                        <a class="dropdown-item" href="#">chambre</a>
+                        <a class="dropdown-item" href="#">salon</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">autres options</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="TV" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">rechercher</button>
+              </form>
+            </div>
+       </nav>
+
+          <br>
+            <div class="p-3 mb-2 bg-dark text-white"> 
+               <h1 style="text-align: center;">  PANNEAU D'AFFFICHAGE  </h1>
+            </div>
+            <br>
+          <div  class="p-3 mb-2 bg-primary text-white" style="text-align :center;">
+            <h3 class="text-light bg-dark" style="text-align: center;"> <i class="fa-solid fa-temperature-high"></i> Température en °C   </h3>
+            <p class="text-white bg-dark" style="text-align: center;" ><span id="temperature">****</span></p>
+            <p class="text-white bg-dark" style="text-align: center;" ><span id="ventstate">******</span></p>
+            
+        </div>
+          <br>
+          <br>
+          
+         <br>
+         <div  class="p-3 mb-2 bg-primary text-white" style="text-align :center;">
+          <h3 class="text-light bg-dark" style="text-align: center;"> <i class="fa-solid fa-temperature-high"></i> temp du seuil  </h3>
+          <p class="text-white bg-dark" style="text-align: center;" ><span id="temp">*****</span></p>
+      
+      <h4 style="text-align: center;">  controle de la tem </h4>
+          
+            <button onclick="tempup()" type="button" class="btn btn-success btn-lg" style="width:40%;"> up </button>
+            <button onclick="tempdown()" type="button" class="btn btn-danger btn-lg" style="width:40%;"> down </button>
+          </div>
+           
+            
+           <br>
+          <br>
+          <div  class="p-3 mb-2 bg-primary text-white" style="text-align :center;">
+            <h3 class="text-light bg-dark" style="text-align: center;"> <i class="fa-solid fa-temperature-high"></i> humidity en %  </h3>
+            <p class="text-white bg-dark" style="text-align: center;" ><span id="humidity">****</span></p>
+        </div>
+        <br>
+          <br>
+
+        <div  class="p-3 mb-2 bg-primary text-white" style="text-align :center;">
+          <h3 class="text-light bg-dark" style="text-align: center;"> <i class="fa-solid fa-temperature-high"></i> capteur d'incendie </h3>
+          <p class="text-white bg-dark" style="text-align: center;" ><span id="firestate">*******</span></p>
+      </div>
+      <br>
+          <br>
+
+        <div  class="p-3 mb-2 bg-primary text-white" style="text-align :center;">
+          <h3 class="text-light bg-dark" style="text-align: center;"> <i class="fa-solid fa-temperature-high"></i> capteur de gaz </h3>
+          <p class="text-white bg-dark" style="text-align: center;" ><span id="gazstate">******</span></p>
+          
+      </div>
+
+      <br>
+          <br>
+
+        <div  class="p-3 mb-2 bg-primary text-white" style="text-align :center;">
+          <h3 class="text-light bg-dark" style="text-align: center;"> <i class="fa-solid fa-temperature-high"></i> capteur de pluie </h3>
+          <p class="text-white bg-dark" style="text-align: center;" ><span id="rainstate">******</span></p>
+      </div>
+
+      <br>
+      <br>
+
+    <div  class="p-3 mb-2 bg-primary text-white" style="text-align :center;">
+      <h3 class="text-light bg-dark" style="text-align: center;"> <i class="fa-solid fa-temperature-high"></i> etat du fenetre </h3>
+      <p class="text-white bg-dark" style="text-align: center;" ><span id="servo fenetre">*******</span></p>
+  </div>
+
+
+  <br>
+      <br>
+
+    <div  class="p-3 mb-2 bg-primary text-white" style="text-align :center;">
+      <h3 class="text-light bg-dark" style="text-align: center;"> <i class="fa-solid fa-temperature-high"></i> etat du portié </h3>
+      <p class="text-white bg-dark" style="text-align: center;" ><span id="servo garage">*******</span></p>
+  </div>
+
+
+
+  <div class="p-3 mb-2 bg-dark text-white" > 
+    <p style="text-align: center;" >ce projet a été crée par yessine gouiaa et encadré par Mme manel hentati comme un projet de fin d'annee</p> 
+     <p style="text-align: center;"><i > ENET'COM </i> </p>
+</div> 
+
+    </body>
+
+    </html>
